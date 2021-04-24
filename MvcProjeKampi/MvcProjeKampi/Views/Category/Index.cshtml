@@ -1,0 +1,28 @@
+﻿@model List<EntityLayer.Concrete.Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+ <h3>MVC PROJE KAMPI TABLO ÖRNEĞİ-CATEGORY </h3>
+<br />
+<table  >
+    <tr>
+        <th>ID</th>
+        <th>ADI</th>
+        <th>AÇIKLAMA</th>
+        <th>DURUM</th>
+    </tr>
+    
+@foreach (var item in Model)
+{
+<tr>
+    <td>@item.CategoryId</td>
+    <td>@item.CategoryName</td>
+    <td>@item.CategoryDescription</td>
+    <td>@item.CategoryStatus</td>
+</tr>
+}
+     
+</table>
